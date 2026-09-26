@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aero Linux | Upcoming Debian-Based OS</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="announcement">
+        🚀 Aero Linux is currently in active development. Star us on <a href="#github">GitHub</a> to track progress!
+    </div>
+
+    <header class="navbar">
+        <div class="logo">Aero<span>Linux</span></div>
+        <nav>
+            <a href="#features">Architecture</a>
+            <a href="#terminal">Terminal Preview</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="https://github.com" class="gh-btn" id="github-link">View on GitHub</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="badge">Debian Stable Core</div>
+        <h1>The Aerodynamic <br>Evolution of <span>Debian</span></h1>
+        <p>An upcoming, ultra-lightweight Linux distribution engineered for modern workflows, absolute stability, and uncompromising speed.</p>
+        
+        <div class="hero-actions">
+            <a href="#roadmap" class="btn primary">View Project Roadmap</a>
+            <a href="#terminal" class="btn secondary">See Architecture</a>
+        </div>
+    </section>
+
+    <section class="gh-stats-container" id="github">
+        <div class="stat-card">
+            <span class="stat-value" id="repo-stars">--</span>
+            <span class="stat-label">GitHub Stars</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value" id="repo-issues">--</span>
+            <span class="stat-label">Active Tasks</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">Debian 12</span>
+            <span class="stat-label">Upstream Base</span>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Engineered for Flight</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Optimized Scheduler</h3>
+                <p>Custom kernel tweaks prioritized for low-latency desktop execution and fluid multitasking responsiveness.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌀</div>
+                <h3>Pure Debian DNA</h3>
+                <p>Zero downstream fragmentation. Fully compatible with native upstream Debian repositories and the `apt` package manager.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💎</div>
+                <h3>Immutable Variant</h3>
+                <p>Plans for a read-only root file system architecture variant for bulletproof system rollbacks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="terminal" class="terminal-section">
+        <h2>Explore System Architecture</h2>
+        <p>Click the workspace tabs below to view planned internal manifests and configurations.</p>
+        
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="tabs">
+                    <button class="tab-btn active" data-target="os-release">/etc/os-release</button>
+                    <button class="tab-btn" data-target="bootstrap">build-iso.sh</button>
+                    <button class="tab-btn" data-target="packages">core-pkgs.txt</button>
+                </div>
+            </div>
+            <div class="terminal-body">
+                <pre id="os-release" class="tab-content active"><code>NAME="Aero Linux"
+VERSION="1.0 Alpha (Upcoming)"
+ID=aero
+ID_LIKE=debian
+PRETTY_NAME="Aero Linux 1.0 Alpha"
+HOME_URL="https://github.com"
+SUPPORT_URL="https://github.com"</code></pre>
+
+                <pre id="bootstrap" class="tab-content"><code>#!/bin/bash
+echo "Initializing Aero Linux filesystem architecture..."
+debootstrap --arch=amd64 stable ./aero-rootfs http://debian.org
+chroot ./aero-rootfs apt-get install --no-install-recommends aero-core -y</code></pre>
+
+                <pre id="packages" class="tab-content"><code>systemd-sysv
+linux-image-amd64
+aero-desktop-environment
+network-manager
+flatpak
+firmware-linux-free</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+        <h2>Development Milestone Matrix</h2>
+        <div class="timeline">
+            <div class="timeline-item done">
+                <div class="time-marker">✓</div>
+                <div class="time-content">
+                    <h3>Phase 1: Base Core Spec</h3>
+                    <p>Finalized package definitions, base debian bootstrap hooks, and kernel optimization architecture profiles.</p>
+                </div>
+            </div>
+            <div class="timeline-item active">
+                <div class="time-marker">⚙</div>
+                <div class="time-content">
+                    <h3>Phase 2: Alpha Live Environment</h3>
+                    <p>Compiling custom installer frameworks and establishing continuous integration target delivery systems on GitHub Actions.</p>
+                </div>
+            </div>
+            <div class="timeline-item future">
+                <div class="time-marker">○</div>
+                <div class="time-content">
+                    <h3>Phase 3: Public Beta ISO</h3>
+                    <p>Community testing launch, bug-tracker triage deployment, and validation of hardware compatibility layers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aero Linux Project. This web project is configured for global deployment via GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
